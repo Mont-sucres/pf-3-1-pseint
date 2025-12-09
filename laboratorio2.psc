@@ -1,40 +1,41 @@
-Algoritmo SegundoLabCalculadora
-	Definir menu, x1, x2, x3, Resultado Como Real;
+
+Algoritmo laboratorio2
 	
-	menu <- 0; x1 <- 0; x2 <- 0; x3 <- 0;
+	Definir Opc, numero1, numero2, resultado Como real;
+	Definir continuar Como Caracter;
 	
-	Escribir "Selecciona la operación que quieres realizar.";
-	Escribir " ";
-	Escribir "1. Sumar";
-	Escribir "2. Restar";
-	Escribir "3. Multiplicar";
-	Escribir "4. Dividir";
-	Leer menu;
+	continuar <- "S";
 	
-	Si menu==4 Entonces
-		Imprimir "Recuerda escribir un número distinto de cero como divisor";
-	FinSi
-	
-	Escribir "Escribe el primer número a realizar la operación";
-	Leer x1;
-	Escribir "Escribe el segundo número a realizar la operación";
-	Leer x2;
-	Mientras x2=0
-		Escribir "Escribe el segundo número a realizar la operación";
-		Leer x2;
-	FinMientras
-	Escribir "Escribe el tercer número a realizar la operación";
-	Leer x3;
-	Mientras x3=0
-		Escribir "Escribe el tercer número a realizar la operación";
-		Leer x3;
-	FinMientras
-	
-	Segun menu Hacer
-		1: Resultado <- x1 + x2 + x3; Imprimir "El resultado de la suma es ", Resultado;
-		2: Resultado <- x1 - x2 - x3; Imprimir "El resultado de la resta es ", Resultado;
-		3: Resultado <- x1 * x2 * x3; Imprimir "El resultado de la multiplicación es ", Resultado;
-		4: Resultado <- (x1 / x2) / x3;	Imprimir "El resultado de la división es ", Resultado;
+	Mientras continuar = "S" O continuar = "s" Hacer
+	Escribir "Elige el numero de la opcion que desees: ";
+	Escribir "1 Sumar ";
+	Escribir "2 Restar";
+	Escribir "3 Dividir";
+	Escribir "4 Multiplicar";
+	Leer Opc;
+	//sumar
+	//restar
+	//dividir
+	//multiplicar
+	Escribir "Escribe el primer numero y da enter";
+	Leer numero1;
+	Escribir "Escribe el segundo numero y da enter";
+	Leer numero2;
+	Segun Opc Hacer
+		1: resultado<- numero1+numero2;
+		2: resultado<- numero1-numero2;
+		3: resultado<- numero1/numero2;
+		4: resultado<- numero1*numero2;
 	FinSegun
+
+	Imprimir "El resultado es: ", + resultado;
+	//Si terminaste rapido, puedes intentar hacer las operaciones de 3 o más números.
+
+	Escribir "¿Deseas realizar otra operación? (S/N)";
+	Leer continuar;
+	
+FinMientras
+
+Escribir "Gracias por usar la calculadora ";
 	
 FinAlgoritmo
