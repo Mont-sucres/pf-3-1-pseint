@@ -1,31 +1,40 @@
-
-Algoritmo laboratorio2
+Algoritmo SegundoLabCalculadora
+	Definir menu, x1, x2, x3, Resultado Como Real;
 	
-	Definir Opc, numero1, numero2, resultado Como Entero;
+	menu <- 0; x1 <- 0; x2 <- 0; x3 <- 0;
 	
-	Escribir "Elige el numero de la opcion que desees: ";
-	Escribir "1 Sumar ";
-	Escribir "2 Restar";
-	Escribir "3 Dividir";
-	Escribir "4 Multiplicar";
-	Leer Opc;
-	//sumar
-	//restar
-	//dividir
-	//multiplicar
-	Escribir "Escribe el primer numero y da enter";
-	Leer numero1;
-	Escribir "Escribe el segundo numero y da enter";
-	Leer numero2;
-	Segun Opc Hacer
-		1: resultado<- numero1+numero2;
-		2: resultado<- numero1-numero2;
-		3: resultado<- numero1/numero2;
-		4: resultado<- numero1*numero2;
+	Escribir "Selecciona la operaci贸n que quieres realizar.";
+	Escribir " ";
+	Escribir "1. Sumar";
+	Escribir "2. Restar";
+	Escribir "3. Multiplicar";
+	Escribir "4. Dividir";
+	Leer menu;
+	
+	Si menu==4 Entonces
+		Imprimir "Recuerda escribir un n煤mero distinto de cero como divisor";
+	FinSi
+	
+	Escribir "Escribe el primer n煤mero a realizar la operaci贸n";
+	Leer x1;
+	Escribir "Escribe el segundo n煤mero a realizar la operaci贸n";
+	Leer x2;
+	Mientras x2=0
+		Escribir "Escribe el segundo n煤mero a realizar la operaci贸n";
+		Leer x2;
+	FinMientras
+	Escribir "Escribe el tercer n煤mero a realizar la operaci贸n";
+	Leer x3;
+	Mientras x3=0
+		Escribir "Escribe el tercer n煤mero a realizar la operaci贸n";
+		Leer x3;
+	FinMientras
+	
+	Segun menu Hacer
+		1: Resultado <- x1 + x2 + x3; Imprimir "El resultado de la suma es ", Resultado;
+		2: Resultado <- x1 - x2 - x3; Imprimir "El resultado de la resta es ", Resultado;
+		3: Resultado <- x1 * x2 * x3; Imprimir "El resultado de la multiplicaci贸n es ", Resultado;
+		4: Resultado <- (x1 / x2) / x3;	Imprimir "El resultado de la divisi贸n es ", Resultado;
 	FinSegun
-	
-	Imprimir "El resultado es: ", + resultado;
-	//Si terminaste rapido, puedes intentar hacer las operaciones de 3 o m醩 n鷐eros.
-	
 	
 FinAlgoritmo
